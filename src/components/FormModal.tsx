@@ -78,14 +78,14 @@ const forms: {
       relatedData={relatedData}
     />
   ),
-  // student: (type, data, setOpen) => (
-  //   <StudentForm
-  //     type={type}
-  //     data={data}
-  //     setOpen={setOpen}
-  //     relatedData={relatedData}
-  //   />
-  // ),
+  student: (setOpen, type, data, relatedData) => (
+    <StudentForm
+      type={type}
+      data={data}
+      setOpen={setOpen}
+      relatedData={relatedData}
+    />
+  ),
 };
 
 const FormModal = ({
