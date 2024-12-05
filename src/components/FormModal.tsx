@@ -46,6 +46,10 @@ const ClassForm = dynamic(() => import('./forms/ClassForm'), {
   loading: () => <h1>Loading...</h1>,
 });
 
+const ExamForm = dynamic(() => import('./forms/ExamForm'), {
+  loading: () => <h1>Loading...</h1>,
+});
+
 const forms: {
   [key: string]: (
     stepOpen: Dispatch<SetStateAction<boolean>>,
@@ -85,6 +89,15 @@ const forms: {
       setOpen={setOpen}
       relatedData={relatedData}
     />
+  ),
+  exam: (setOpen, type, data, relatedData) => (
+    <ExamForm
+      type={type}
+      data={data}
+      setOpen={setOpen}
+      relatedData={relatedData}
+    />
+    // TODO OTHER LIST ITEMS
   ),
 };
 
